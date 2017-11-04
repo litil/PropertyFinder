@@ -1,5 +1,13 @@
 import React, {Component} from 'react';
-import {View, Text, Navigator, StyleSheet, TextInput, Button} from 'react-native';
+import {
+    View,
+    Text,
+    Navigator,
+    StyleSheet,
+    TextInput,
+    Button,
+    Image
+} from 'react-native';
 
 export default class SearchScenes extends Component {
     static get defaultProps() {
@@ -19,6 +27,7 @@ export default class SearchScenes extends Component {
                     <TextInput style={styles.searchInput} placeholder='Search via name or postcode'/>
                     <Button onPress={() => {}} color='#48BBEC' title='Go'/>
                 </View>
+                <Image source={require('../../Resources/house.png')} style={styles.image}/>
             </View>
         );
     }
@@ -51,5 +60,9 @@ const styles = StyleSheet.create({
         borderColor: '#48BBEC',
         borderRadius: 8,
         color: '#48BBEC'
+    },
+    image: {
+        width: 217,
+        height: 138
     }
 });
