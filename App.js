@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-// import SearchScene from './SearchScene';
 import SearchScenes from './src/scenes/SearchScenes';
+import RootNavigator from './src/RootNavigator';
+import { Navigator } from 'react-native';
 
 export default class App extends Component < {} > {
     render() {
         return (
-            <SearchScenes />
+            <RootNavigator />
         )
     }
+
 }
