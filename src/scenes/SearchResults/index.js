@@ -8,6 +8,7 @@ import {
     Text
 } from 'react-native';
 import PropTypes from 'prop-types';
+import ListItem from '../../components/ListItem';
 
 export default class SearchResults extends Component {
     static propTypes = {
@@ -18,19 +19,18 @@ export default class SearchResults extends Component {
 
     _keyExtractor = (item, index) => index;
 
-    _renderItem = ({item}) => {
-        return (
-            <TouchableHighlight underlayColor='#dddddd'>
-                <View>
-                    <Text>{item.title}</Text>
-                </View>
-            </TouchableHighlight>
-        );
+    _renderItem = ({item, index}) => (
+        <ListItem
+            item={item}
+            index={index}
+            onPressItem={this._onPressItem}/>
+    );
 
+    _onPressItem = (index) => {
+        console.log("Pressed row: " + index);
     };
 
     render() {
-        const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec purus vitae sem sagittis mattis. Vestibulum a dolor velit. Maecenas pellentesque sem at consequat ultricies. Fusce congue iaculis leo sit amet dapibus. Integer et varius ipsum. In magna sapien, maximus ac sagittis id, tristique eget eros. Praesent semper vehicula ultricies. Curabitur justo orci, condimentum at ante nec, feugiat venenatis lectus. Donec ac augue libero. Maecenas tincidunt lacus sit amet luctus mattis.'
         return <FlatList
             data={this.props.listings}
             keyExtractor={this._keyExtractor}
