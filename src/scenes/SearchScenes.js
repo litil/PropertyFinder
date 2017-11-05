@@ -74,8 +74,9 @@ export default class SearchScenes extends Component {
         this.setState({isLoading: false, message: ''});
 
         if (response.application_response_code.substr(0, 1) === '1') {
-            console.log('Properties found: ' + response.listings.length);
-                this.setState({message: 'Properties found: ' + response.listings.length});
+            const { navigate } = this.props.navigation;
+            navigate('Results', {listings: response.listings, name: 'Jane'})
+
         } else {
             this.setState({message: 'Location not recognized; please try again.'});
         }
