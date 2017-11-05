@@ -7,8 +7,15 @@ import {
     FlatList,
     Text
 } from 'react-native';
+import PropTypes from 'prop-types';
 
 export default class SearchResults extends Component {
+    static propTypes = {
+        /** Array of properties */
+        listings: PropTypes.array.isRequired
+    }
+    static defaultProps = {}
+
     _keyExtractor = (item, index) => index;
 
     _renderItem = ({item}) => {

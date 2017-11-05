@@ -12,12 +12,24 @@
     "react-navigation": "^1.0.0-beta.19"
   },
   "devDependencies": {
-    "babel-jest": "21.2.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
     "babel-preset-react-native": "4.0.0",
-    "jest": "21.2.1",
-    "react-test-renderer": "16.0.0-beta.5"
+    "img-loader": "^2.0.0",
+    "jest": "^21.2.1",
+    "react-native-mock": "^0.3.1",
+    "react-styleguidist": "^6.0.32",
+    "react-test-renderer": "^16.0.0-beta.5",
+    "webpack": "^3.8.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "!node_modules/react-runtime"
+    ]
   }
 }

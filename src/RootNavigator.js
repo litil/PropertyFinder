@@ -3,7 +3,7 @@ import {View, Text} from 'react-native';
 import {StackNavigator} from 'react-navigation';
 import SearchScenes from './scenes/SearchScenes';
 import HomeScene from './scenes/HomeScene';
-import SearchResults from './scenes/SearchResults';
+import SearchResults from './scenes/SearchResults/';
 
 /**
  * Turns this.props.navigation.state.params into this.params.<x>
