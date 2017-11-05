@@ -30,6 +30,7 @@ export default class SearchResults extends Component {
     };
 
     render() {
+        const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec purus vitae sem sagittis mattis. Vestibulum a dolor velit. Maecenas pellentesque sem at consequat ultricies. Fusce congue iaculis leo sit amet dapibus. Integer et varius ipsum. In magna sapien, maximus ac sagittis id, tristique eget eros. Praesent semper vehicula ultricies. Curabitur justo orci, condimentum at ante nec, feugiat venenatis lectus. Donec ac augue libero. Maecenas tincidunt lacus sit amet luctus mattis.'
         return <FlatList
             data={this.props.listings}
             keyExtractor={this._keyExtractor}

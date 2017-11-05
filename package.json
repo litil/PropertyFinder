@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "testCoverage": "jest --coverage",
+    "lint": "eslint src/**/*index.js",
+    "lint:watch": "esw -w src/**/*index.js"
   },
   "dependencies": {
     "react": "16.0.0-beta.5",
@@ -12,10 +15,14 @@
     "react-navigation": "^1.0.0-beta.19"
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.1",
     "babel-jest": "^21.2.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "babel-preset-react-native": "4.0.0",
+    "eslint": "^4.10.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-react-native": "^3.1.0",
     "img-loader": "^2.0.0",
     "jest": "^21.2.1",
     "react-native-mock": "^0.3.1",
